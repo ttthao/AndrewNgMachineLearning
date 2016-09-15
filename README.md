@@ -10,6 +10,5 @@ that is my preferred scripting language.
 ## Last Changes:
 
 #### Thursday, 09/15/2016
-Initialized git on current work up to assignment 5.
-Currently implementing algorithm validation methods for assignment 5.
+Finished algorithm validation, starting SVM assignment (week 7)
 
