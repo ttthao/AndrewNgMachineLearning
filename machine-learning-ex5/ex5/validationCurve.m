@@ -38,16 +38,19 @@ error_val = zeros(length(lambda_vec), 1);
 %       end
 %
 %
-
-
-
-
-
-
-
-
-
-
 % =========================================================================
-
+for i = 1:length(lambda_vec)
+    
+    % Find out the best lambda to balance bias/variance
+    lambda = lambda_vec(i);
+    
+    % Calculate parameters with varying lambdas
+    theta = trainLinearReg(X, y, lambda);
+    
+    % Don't set lambda to 0, just pass 0 for lambda
+    error_train(i) = linearRegCostFunction(X, y, theta, 0);
+    
+    % theta varies with lambda, but use the entire cv set to find the cv cost
+    error_val(i) = linearRegCostFunction(Xval, yval, theta, 0);
+    
 end

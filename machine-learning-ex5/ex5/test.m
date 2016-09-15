@@ -13,12 +13,14 @@ theta = [1 ; 1];
 % You need to return the following variables correctly 
 J = 0;
 grad = zeros(size(theta));
-lambda = 1;
-X = [ones(m, 1) X];
-Xval = [ones(size(Xval, 1), 1) Xval];
+lambda = 0;
+% X = [ones(m, 1) X];
+% Xval = [ones(size(Xval, 1), 1) Xval];
 % You need to return these values correctly
 error_train = zeros(m, 1);
 error_val   = zeros(m, 1);
+p = 8;
+X_poly = zeros(numel(X), p);
 
 %J = linearRegCostFunction([ones(m, 1) X], y, theta, 1);
 
